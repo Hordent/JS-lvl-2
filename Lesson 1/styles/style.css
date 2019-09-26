@@ -1,0 +1,202 @@
+* {
+    margin: 0;
+    padding: 0;
+    --topColor: rgb(186, 248, 245);
+    --secondColor:rgb(3, 54, 192);
+    --secondColorTrans:rgba(3, 54, 192, 0.6);
+    --backColor: #FFFAFA;
+}
+
+
+.container {
+    width: 1000px;
+    height: 100%;  
+    margin: 0 auto; 
+}
+
+header {
+    background-color: var(--topColor);
+    padding: 15px 30px;
+    margin: 0;
+    display: flex;    
+    justify-content: flex-end;
+   
+
+
+}
+.header_basketBtn {
+    width: 100px;    
+    background-color: var(--backColor);
+    color: var(--secondColor);
+    font-weight: 600;
+    font-size: 16px;
+    text-transform: uppercase;
+    text-align: center;
+    padding: 9px;
+    border-radius: 10px;
+    border: 2px solid var(--secondColor);
+    box-shadow: 0 0 6px 0px rgba(0,0,0,0.8);
+
+}
+.header_basketBtn:hover {
+    color: red;
+    cursor: pointer;
+    border: 2px solid red;
+}
+.header_basketBtn:active {
+    box-shadow: none;
+}
+.main {
+    height: calc(100vh - 67px);
+    background-color: var(--backColor);
+    padding: 10px;
+    position: relative;
+
+    
+}
+
+.productList {
+    display: flex;
+    justify-content: center;
+}
+.product {
+    width: 250px;
+    font-weight: 600;
+    border-radius: 10px;
+    border: 2px solid var(--secondColor);
+    box-shadow: 2px 2px 6px 0px rgba(0,0,0,0.8);
+    padding: 10px 15px 15px;
+    background-color: #fff;
+    margin: 0 10px;
+    
+}
+
+.product h3 {
+    text-align: center;
+    color: var(--secondColor);
+    display: block;
+    padding-top: 6px;
+    padding-bottom: 6px; 
+}
+.product .id {
+    display: none;
+}
+.product img {
+    width: 250px; 
+    height: 250px; 
+    box-shadow: 6px 6px 6px 0px rgba(0,0,0,0.5);  
+}
+.product p {
+    padding-top: 15px;
+    padding-bottom: 15px; 
+}
+
+.product_btn {
+    width: 100px;    
+    background-color: var(--topColor);
+    color: var(--secondColor);
+    font-weight: 600;
+    font-size: 16px;
+    text-transform: uppercase;
+    text-align: center;
+    padding: 5px;
+    border-radius: 10px;
+    border: 2px solid var(--secondColor);
+    box-shadow: 0 2px 6px 0px rgba(0,0,0,0.8);
+    margin: 0 auto;
+}
+.product_btn:hover {
+    color: red;
+    cursor: pointer;
+    border: 2px solid red;
+}
+.product_btn:active {
+    box-shadow: none;
+    color: red;
+    cursor: pointer;
+    border: 2px solid red;
+}
+
+/*Корзина*/
+.b-modal {
+    min-height: 80px;
+    min-width: 350px;
+    text-align: center;
+    padding: 10px 10px 5px;
+    border: 2px solid var(--secondColor);
+    background-color: var(--backColor);
+    display: block;
+    border-radius: 10px;
+    position: absolute;
+    right: 10px;
+    z-index: 1;
+}
+.b-modal__close {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: var(--backColor);
+    border: 1px solid var(--secondColor);
+    color: var(--secondColor);
+    line-height: 1;
+    position: relative;
+    top: -22px;
+    left: 405px;
+    display: block;
+    font-size: 30px;
+    font-weight: 600;
+    
+}
+.b-basket {
+    position: relative;
+    top: -20px;
+}
+.b-basket h3 {
+    padding-bottom: 5px;
+    color: var(--secondColor);
+}
+.b-basket tr {
+    padding: 5px;    
+}
+
+.b-basket_productRow {
+    box-shadow: 0px 0px 2px 0px var(--secondColorTrans);
+    margin: 3px 0;
+}
+.b-basket_productName {
+    width: 160px;
+}
+.b-basket td {
+    padding: 2px;
+}
+.b-basket tr:first-of-type td {
+    text-decoration: underline;
+    font-weight: 600;
+    color: var(--secondColor);
+}
+
+
+.b-basket i {
+    padding: 5px;
+}
+.b-basket i:hover {
+    color: var(--secondColor);
+    cursor: pointer;
+}
+
+.b-basket_total {
+    font-weight: 600;
+    text-align: center;
+    padding-top: 5px;
+}
+.b-modal__close:hover {
+    background-color: var(--topColor);
+    cursor: pointer;
+}
+
+.b-modal_hide {
+    display: none;
+}
+.hide {
+    display: none;
+}
