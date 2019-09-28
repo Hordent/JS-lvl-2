@@ -1,9 +1,10 @@
 'use strict';
-
+let productList = new ProductList();
+productList.fetchGoods();
+productList.render();
+let basket = new Basket();
 
 let basketBtn = document.querySelector('.header_basketBtn');
-
-
 basketBtn.addEventListener('click', function (event) {
     modalWindow.show();
     modalWindow.refresh();
@@ -20,9 +21,7 @@ productBtns.forEach(function (element) {
     element.addEventListener('click', function (event) {
         let productCard = event.target.parentNode;
         let productId = +productCard.getAttribute('data-id');
-        let productName = productCard.querySelector('h3').innerText;
-        let productPrice = +productCard.querySelector('.product_price').innerText;
-        basket.addProduct(productId, productName, productPrice);
+        basket.addProduct(productId);
         modalWindow.refresh();
         modalWindow.addBtnEvents();
 
