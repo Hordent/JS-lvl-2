@@ -43,14 +43,12 @@ class Basket {
     }
 
     calcTotalSum() {
-        let totalSum = 0;
-        this.basketList.forEach(element => {
-            totalSum += element.sum;
-        });
-        return totalSum;
+        // let totalSum = 0;
+        return this.basketList.reduce((totalSum, element) => totalSum += element.sum, 0)
+    
     }
 
-    render () {
+    render() {
         let basketHTML = '';
         if (basket.basketList.length === 0) {
             basketHTML = `<div class="b-basket__empty">Корзина пуста</div>`;
@@ -78,7 +76,7 @@ class Basket {
             </div>`;
         }
         return basketHTML;
-    
+
     }
 }
 
